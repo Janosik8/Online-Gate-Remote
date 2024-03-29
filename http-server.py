@@ -31,27 +31,88 @@ class MyServer(BaseHTTPRequestHandler):
 
     def do_GET(self):
         html = '''
-           <html>
-            <head lang="pl">
-                <meta charset="utf-8">
-                
-            </head>
-           <body 
-            style="width:100%; margin: 20px auto;">
-           <h1 style="font-size: 100px;" align="center">Pilot Ogiegło</h1>
-           <div class="glowny" align="center"> 
-           <form action="/" method="POST">
-               <input type="submit" name="submit" value="brama" style="width: 50%; height: 25%; font-size: 100px; float: left;">
-               <input type="submit" name="submit" value="garaz" style="width: 50%;  height: 25%; font-size: 100px; float: left;">
-               <input type="submit" name="submit" value="Dul_prawy" style="width: 50%; height: 25%; font-size: 100px; clear: both;">
-               <input type="submit" name="submit" value="Dul_lewy" style="width: 50%; height: 25%; font-size: 100px; float: left;">
-               <input type="submit" name="submit" value="Hal_przod" style="width: 50%; height: 25%; font-size: 100px; clear: both;">
-               <input type="submit" name="submit" value="Hal_bok" style="width: 50%; height: 25%; font-size: 100px; float: left;">
-               <input type="submit" name="submit" value="Hal_tyl" style="width: 50%; height: 25%; font-size: 100px; clear: both;">
-            </div>
-            </form>
-           </body>
-           </html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+</head>
+<body style="width: 100%; margin: 20px auto;">
+    <h1 style="font-size: 100px; text-align: center;">Pilot Ogiegło</h1>
+    <div class="glowny" style="text-align: center; height:100%;
+    display: flex;
+    justify-content: space-between;
+    width:  100%;"> 
+        <form action="/" method="POST" class="glowny" style="height:100%;
+        display: flex;
+        justify-content: space-between;
+        width:  100%;">
+            <div class="section1" style=" width: 49%;">
+            <input type="submit" name="submit" value="brama" style="min-height: 65%;
+            width: 100%;
+            font-size: 100px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: background-color 0.3s, transform 0.3s; 
+            cursor: pointer; background-color: #FF5733; /* Red */
+            color: white; ">
+            <input type="submit" name="submit" value="garaz" style="min-height: 65%;
+            width: 100%;
+            font-size: 100px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: background-color 0.3s, transform 0.3s; 
+            cursor: pointer; background-color: #33FF57; /* Green */
+            color: white;">
+            <input type="submit" name="submit" value="Dul_prawy" style="min-height: 65%;
+            width: 100%;
+            font-size: 100px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: background-color 0.3s, transform 0.3s; 
+            cursor: pointer; background-color: #3357FF; /* Blue */
+            color: white;">
+            <input type="submit" name="submit" value="Dul_lewy" style="min-height: 65%;
+            width: 100%;
+            font-size: 100px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: background-color 0.3s, transform 0.3s; 
+            cursor: pointer;  background-color: #F033FF; /* Purple */
+            color: white;">
+        </div>
+        <div class="section2" style=" width: 49%;">
+            <input type="submit" name="submit" value="Hal_przod" style="min-height: 65%;
+            width: 100%;
+            font-size: 100px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: background-color 0.3s, transform 0.3s; 
+            cursor: pointer; background-color: #FF5733; /* Red */
+            color: white;">
+            <input type="submit" name="submit" value="Hal_bok" style="min-height: 65%;
+            width: 100%;
+            font-size: 100px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: background-color 0.3s, transform 0.3s; 
+            cursor: pointer; background-color: #33FF57; /* Green */
+            color: white; ">
+            <input type="submit" name="submit" value="Hal_tyl" style="min-height: 65%;
+            width: 100%;
+            font-size: 100px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: background-color 0.3s, transform 0.3s; 
+            cursor: pointer;
+            background-color: #3357FF; /* Blue */
+            color: white; ">
+        </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
         '''
         temp = getTemperature()
         self.do_HEAD()
