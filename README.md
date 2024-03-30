@@ -1,7 +1,7 @@
 # Smart Gate Access: An online gate remote controller.
 
 ## Result
-![Description of the GIF](remote.gif)
+![Description of the GIF](images/remote.gif)
 **For a detailed explanation check out [EXPLAINED.md](EXPLAINED.md)**
 
 
