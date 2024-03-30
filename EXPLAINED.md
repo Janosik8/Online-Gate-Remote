@@ -1,8 +1,11 @@
+[![Remote control operation](http://img.youtube.com/vi/EX7OhpWrqtY/0.jpg)](http://www.youtube.com/watch?v=EX7OhpWrqtY "Remote control operation")
+
+
 ## Idea
 
 **LED Controller** 🎮💡
 
-One day, while scrolling through videos, I stumbled upon this clip: [link]. It sparked an idea 💡 in my mind: what if I connect the programmable pins of the Raspberry Pi to the remote control? Would it work? Being myself, I couldn't resist testing this idea. And thus, the project of creating my own mobile remote control was born.
+One day, while scrolling through videos, I stumbled upon this [clip](https://www.youtube.com/watch?v=IQWrFE_wtUk&t=2s). It sparked an idea 💡 in my mind: what if I connect the programmable pins of the Raspberry Pi to the remote control? Would it work? Being myself, I couldn't resist testing this idea. And thus, the project of creating my own mobile remote control was born.
 
 ## Collecting the Needed Hardware
 
@@ -48,6 +51,16 @@ A crucial part of securing the system was ensuring that only my family members c
 Like many home internet setups, my IP address is hidden behind NAT by my ISP, which complicates direct access to my web server from the internet. To solve this issue, I utilized Cloudflare Tunnel to create a secure pathway to the web server hosted on my Raspberry Pi, which sits behind the NAT.
 
 ![image](tunel.png)
+
+## Contingency Plan for Power Outages 🚨🔌
+
+Power outages can disrupt the operation of home automation systems, including my gate control system. To ensure resilience and minimize downtime, I've implemented a strategy that automatically restarts both the server and the Cloudflare Tunnel on the Raspberry Pi upon power restoration.
+![scripts](scripts.png)
+
+### Automated Restart with Crontab
+
+I utilized `crontab`, a Linux utility for running scripts or commands at specified times, to automate the restart process. This setup ensures that both the server and the Cloudflare Tunnel service are automatically launched when the Raspberry Pi boots up, without the need for manual intervention. Here's how I configured `crontab` to manage this:
+![crontab](crontab.png)
 
 ### Why the 64-Bit Processor Matters
 
