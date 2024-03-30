@@ -1,6 +1,7 @@
 # Smart Gate Access: An online gate remote controller.
 
-[![Remote control operation](http://img.youtube.com/vi/EX7OhpWrqtY/0.jpg)](http://www.youtube.com/watch?v=EX7OhpWrqtY "Remote control operation")
+![Description of the GIF](remote.gif)
+
 
 ## The Challenge:
 In a world swiftly moving towards complete digital integration, it feels somewhat archaic to rely on physical remotes for daily tasks. One such glaring example was the operation of my home gate. The dependency on a physical remote, which was prone to getting lost or running out of battery at the most inconvenient times, posed a challenge. It sparked a quest for a smarter, more seamless way to control the gate, ideally through the convenience of a smartphone, integrating this aspect of my home into the modern, interconnected lifestyle we've all come to appreciate.
